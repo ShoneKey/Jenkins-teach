@@ -1,5 +1,3 @@
-hellojenkins
-hello songqingtest
-hello github
-hello git3333
-gotest
+execute cmd:
+
+robot --pythonpath . tc
