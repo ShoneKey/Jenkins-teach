@@ -1,0 +1,4 @@
+--test *tc001052
+--test *tc001051
+--pythonpath .
+tc
