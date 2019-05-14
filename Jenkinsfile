@@ -17,14 +17,14 @@ node {
 
         bat 'echo start Test'
         // Using returnStdout
-        CC = """${sh(
+        CC = """${bat(
                 returnStdout: true,
                 script: 'echo "clang"'
             )}"""
         echo CC
 
          // Using returnStatus
-        EXIT_STATUS = """${sh(
+        EXIT_STATUS = """${bat(
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
