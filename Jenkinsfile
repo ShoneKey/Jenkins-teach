@@ -16,18 +16,21 @@ node {
          */
         bat 'echo start Test'
         //junit '**/target/*.xml'
+        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+        def username = 'Jenkins'
+        echo 'Hello Mr. ${username}'
+        echo "I said, Hello Mr. ${username}"
     }
-    echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-    def username = 'Jenkins'
-    echo 'Hello Mr. ${username}'
-    echo "I said, Hello Mr. ${username}"
+
 }
 
 node {
     /* .. snip .. */
     stage('Deploy') {
+
         if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
             bat 'echo start Deploy'
+            bat 'robot --pythonpath . tc'
         }
     }
     /* .. snip .. */
