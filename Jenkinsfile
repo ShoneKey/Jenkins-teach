@@ -12,7 +12,7 @@ node {
     /* .. snip .. */
     stage('Test') {
         withEnv(["robot_path=tc"]){
-        bat 'dir ${robot_path}'
+        bat 'dir tc'
         }
 
         bat 'echo start Test'
