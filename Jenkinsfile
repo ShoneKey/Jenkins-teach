@@ -11,11 +11,12 @@ node {
 node {
     /* .. snip .. */
     stage('Test') {
-        /* `make check` returns non-zero on test failures,
-         * using `true` to allow the Pipeline to continue nonetheless
-         */
+        withEnv(["/tc"]){
+        bat 'dir'
+        }
+
         bat 'echo start Test'
-        //junit '**/target/*.xml'
+
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         def username = 'Jenkins'
         echo 'Hello Mr. ${username}'
