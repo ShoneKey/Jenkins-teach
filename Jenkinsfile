@@ -22,14 +22,14 @@ node {
                 returnStdout: true,
                 script: 'echo "clang"'
             )}"""
-        echo $CC
+        echo CC
 
          // Using returnStatus
         EXIT_STATUS = """${sh(
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
-        echo $EXIT_STATUS
+        echo EXIT_STATUS
 
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         def username = 'Jenkins'
