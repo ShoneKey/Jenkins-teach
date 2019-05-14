@@ -11,7 +11,7 @@ node {
 node {
     /* .. snip .. */
     stage('Test') {
-        withEnv(["tc"]){
+        withEnv(["robot_path=tc"]){
         bat 'dir'
         }
 
