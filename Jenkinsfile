@@ -13,7 +13,6 @@ node {
     stage('Test') {
         withEnv(["robot_path=tc"]){
         bat 'dir tc'
-        echo ${robot_path}
         }
 
         bat 'echo start Test'
