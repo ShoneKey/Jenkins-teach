@@ -12,7 +12,7 @@ node {
     /* .. snip .. */
     stage('Test') {
         withEnv(["robot_path=tc"]){
-        bat 'dir'
+        bat 'dir $robot_path'
         }
 
         bat 'echo start Test'
@@ -31,8 +31,8 @@ node {
 
         if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
             bat 'echo start Deploy'
-            bat 'robot --pythonpath . tc'
+            //bat 'robot --pythonpath . tc'
         }
     }
-    /* .. snip .. */
+
 }
