@@ -13,9 +13,23 @@ node {
     stage('Test') {
         withEnv(["robot_path=tc"]){
         bat 'dir tc'
+        echo ${robot_path}
         }
 
         bat 'echo start Test'
+        // Using returnStdout
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}"""
+        echo $CC
+
+         // Using returnStatus
+        EXIT_STATUS = """${sh(
+                returnStatus: true,
+                script: 'exit 1'
+            )}"""
+        echo $EXIT_STATUS
 
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
         def username = 'Jenkins'
