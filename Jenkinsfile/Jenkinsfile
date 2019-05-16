@@ -8,6 +8,8 @@ node{
     stage('Test'){
         checkout scm
         echo 'start test'
+        res=readFile('tclist.txt')
+        echo res
     }
     stage('Deploy'){
         checkout scm
