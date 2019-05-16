@@ -1,32 +1,16 @@
-stage('Build') {
-    node {
-        checkout scm
-        bat 'echo make'
-        //stash includes: '**/target/*.jar', name: 'app'
-    }
-}
 
-stage('Test') {
-    node('linux') {
+
+node{
+    stage('Build'){
         checkout scm
-        try {
-            //unstash 'app'
-            sh 'echo makecheck'
-        }
-        finally {
-            //junit '**/target/*.xml'
-            echo 'linux done'
-        }
+        echo 'start build'
     }
-    node('windows') {
+    stage('Test'){
         checkout scm
-        try {
-            //unstash 'app'
-            bat 'echo makecheck'
-        }
-        finally {
-            //junit '**/target/*.xml'
-            echo 'windows done'
-        }
+        echo 'start test'
+    }
+    stage('Deploy'){
+        checkout scm
+        echo 'start deploy'
     }
 }
