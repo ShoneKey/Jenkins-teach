@@ -10,6 +10,7 @@ node{
         echo 'start test'
         res=readFile('tclist.txt')
         echo res
+        bat 'robot --pythonpath . tc'
     }
     stage('Deploy'){
         checkout scm
