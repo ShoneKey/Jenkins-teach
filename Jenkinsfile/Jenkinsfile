@@ -11,13 +11,13 @@ node{
         echo res
         //def path=System.getenv('PATH')
         //echo path
-        withEnv(['robot=C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\','ComSpec=C:\\windows\\system32\\']) {
+        withEnv(['robot=C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\robot.exe','ComSpec=C:\\windows\\system32\\']) {
          bat 'robot --pythonpath . tc'
         }
 
     }
     stage('Deploy'){
-        
+
         echo 'start deploy'
     }
 }
