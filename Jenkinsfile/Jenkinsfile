@@ -6,19 +6,18 @@ node{
         echo 'start build'
     }
     stage('Test'){
-        checkout scm
         echo 'start test'
         res=readFile('tclist.txt')
         echo res
-        def path=System.getenv('PATH')
-        echo path
+        //def path=System.getenv('PATH')
+        //echo path
         withEnv(['robot=C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\','ComSpec=C:\\windows\\system32\\']) {
          bat 'robot --pythonpath . tc'
         }
 
     }
     stage('Deploy'){
-        checkout scm
+        
         echo 'start deploy'
     }
 }
