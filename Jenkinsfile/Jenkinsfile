@@ -10,8 +10,8 @@ node{
         echo 'start test'
         res=readFile('tclist.txt')
         echo res
-        withEnv(['PATH="C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\"']) {
-         robot --pythonpath . tc
+        withEnv(['PATH=$PATH;"C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\"']) {
+         bat 'robot --pythonpath . tc'
         }
 
     }
