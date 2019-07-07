@@ -11,7 +11,7 @@ node{
         res=readFile('tclist.txt')
         echo res
         withEnv(['PATH="C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python36\\Scripts\\"']) {
-         bat 'robot --pythonpath . tc'
+         robot --pythonpath . tc
         }
 
     }
