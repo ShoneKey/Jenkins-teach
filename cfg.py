@@ -5,7 +5,7 @@ database=           ['127.0.0.1'  , '3306']
 adminuser=          {'name':'auto'  ,  'pw':'sdfsdfsdf'}
 
 
-g_vcode = '00000000056937869147'
+g_vcode = '00000000055222333444'
 
 g_subject_math_id    = 1
 g_subject_science_id = 5
