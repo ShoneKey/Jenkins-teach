@@ -10,7 +10,7 @@ node{
         res=readFile('tclist.txt')
         echo res
 
-        bat 'robot --pythonpath . tc'
+        bat 'robot --pythonpath . --noncritical bugs tc'
 
 
     }
