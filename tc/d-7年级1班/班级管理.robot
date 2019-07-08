@@ -19,6 +19,7 @@ Variables   cfg.py
 
 
 添加班级3 - tc000003
+    [Tags]  bugs
 
 #  添加7年级1班
     ${ret1}=    add school class    ${g_grade_7_id}     1班     60
@@ -59,6 +60,7 @@ Variables   cfg.py
 
 
 修改班级2 - tc000052
+    [Tags]  bugs
 
 #  添加7年级2班
     ${ret1}=    add school class    ${g_grade_7_id}     2班     60
