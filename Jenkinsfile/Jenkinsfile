@@ -11,7 +11,7 @@ node{
         echo res
 
         bat 'robot --pythonpath . tc'
-        }
+
 
     }
     stage('Deploy'){
