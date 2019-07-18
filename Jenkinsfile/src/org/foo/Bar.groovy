@@ -1,4 +1,4 @@
-package org.foo.Bar
+package org.foo
 
 def start(){
     stage('Build'){
