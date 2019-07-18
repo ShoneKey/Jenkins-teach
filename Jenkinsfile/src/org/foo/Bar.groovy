@@ -1,3 +1,4 @@
+// src/org/foo/Bar.groovy
 package org.foo
 
 def start(){

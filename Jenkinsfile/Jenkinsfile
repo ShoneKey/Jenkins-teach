@@ -27,6 +27,6 @@ node{
 node{
     checkout scm
     //import org.foo.Bar
-    def bar=new org.foo.Bar()
+    def bar = new org.foo.Bar()
     bar.start()
 }
