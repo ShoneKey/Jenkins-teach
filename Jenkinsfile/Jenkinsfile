@@ -1,5 +1,5 @@
-@Library('mylib1') _
-
+//@Library('mylib1') _
+/*
 node{
     stage('Build'){
         checkout scm
@@ -10,7 +10,7 @@ node{
         res=readFile('tclist.txt')
         echo res
 
-        bat 'robot --pythonpath . --noncritical bugs tc'
+        //bat 'robot --pythonpath . --noncritical bugs tc'
 
 
     }
@@ -18,4 +18,12 @@ node{
 
         echo 'start deploy'
     }
+}
+*/
+
+import org.foo.Bar
+
+node{
+    //def bar=new Bar()
+    bar.start()
 }
