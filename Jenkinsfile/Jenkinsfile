@@ -21,9 +21,12 @@ node{
 }
 */
 
-import org.foo.Bar
+
+
 
 node{
-    //def bar=new Bar()
+    checkout scm
+    import org.foo.Bar
+    def bar=new Bar()
     bar.start()
 }
