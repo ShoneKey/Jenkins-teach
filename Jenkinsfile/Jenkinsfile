@@ -27,6 +27,6 @@ node{
 node{
     checkout scm
     load 'Jenkinsfile/src/org/foo/Bar.groovy'
-    //def bar = new org.foo.Bar()
-    Bar.start()
+    def bar = new org.foo.Bar()
+    bar.start()
 }
