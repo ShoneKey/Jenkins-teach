@@ -23,10 +23,10 @@ node{
 
 
 
-import org.foo.Bar
+//import org.foo.Bar
 node{
     checkout scm
-
+    load 'src/org/foo/Bar.groovy'
     //def bar = new org.foo.Bar()
     Bar.start()
 }
