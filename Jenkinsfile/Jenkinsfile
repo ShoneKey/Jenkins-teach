@@ -26,7 +26,7 @@ node{
 //import org.foo.Bar
 node{
     checkout scm
-    load 'Jenkinsfile/src/org/foo/Bar.groovy'
-    def bar = new org.foo.Bar()
+    def bar=load 'Jenkinsfile/src/org/foo/Bar.groovy'
+    //def bar = new org.foo.Bar()
     bar.start()
 }
