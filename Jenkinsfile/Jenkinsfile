@@ -23,10 +23,10 @@ node{
 
 
 
-
+import org.foo.Bar
 node{
     checkout scm
-    import org.foo.Bar
+
     //def bar = new org.foo.Bar()
     Bar.start()
 }
